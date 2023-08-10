@@ -4,46 +4,49 @@ Auth info:
     https://aws-labs-fpt.signin.aws.amazon.com/console
     User name: Hoang
 
-CLI
-    aws configure
+    CLI
+        aws configure
 
-CloudShell
-    online CLI
+    CloudShell
+        online CLI
 
-Platform as a Service (PaaS)
-    chỉ cần upload data + code (không cần config infra)
-    - AWS elasstic Beanstack
-    - Azure WebApps
-    - Compute App Engine
+    Platform as a Service (PaaS)
+        chỉ cần upload data + code (không cần config infra)
+        - AWS elasstic Beanstack
+        - Azure WebApps
+        - Compute App Engine
 
-Data transfer
-    - upload data lên aws sẽ không tính phí lưu lượng
-    - download data từ aws sẽ tính phí lưu lượng
+    Data transfer
+        - upload data lên aws sẽ không tính phí lưu lượng
+        - download data từ aws sẽ tính phí lưu lượng
 
-AWS Global Infrastructure
-    - Region
-        AZ: Có nhiều AZ trong Region
-            DataCenter: có 1 hoặc nhiều DataCenter trong AZ
-    
-    AZ
-        - Trong mỗi AZ có thể tạo Public Subnet, Private Subnet
-        - Các AZ giao tiếp với nhau qua Redundant Networking
+    AWS Global Infrastructure
+        - Region
+            AZ: Có nhiều AZ trong Region
+                DataCenter: có 1 hoặc nhiều DataCenter trong AZ
+        
+        AZ
+            - Trong mỗi AZ có thể tạo Public Subnet, Private Subnet
+            - Các AZ giao tiếp với nhau qua Redundant Networking
 
-    CloudFront
-        - Content Delivery network
+        CloudFront
+            - Content Delivery network
 
-Global Infrastructure
-    //public-and-private-services.jpg
-    https://digitalcloud.training/aws-global-infrastructure/
+    Global Infrastructure
+        //public-and-private-services.jpg
+        https://digitalcloud.training/aws-global-infrastructure/
 
-AWS Pricing Cheat Sheet
-    https://digitalcloud.training/aws-billing-and-pricing/#aws-pricing-calculator
+    AWS Pricing Cheat Sheet
+        https://digitalcloud.training/aws-billing-and-pricing/#aws-pricing-calculator
 
+
+PRACTICE IAM
 ================================================
-PRACTICE
-================================================
+
 https://digitalcloud.training/aws-identity-and-access-management/
-IAM
+    
+    IAM
+
     We have policies that are called identity based policies and resource based policies.
     - Quản lý access đến resource (EC2, S3, IAM)
     - Group: chứa nhiều user
@@ -62,6 +65,13 @@ IAM
     Policies: là JSON define permissions
     có thể apply cho user, group, role
 
-SCPs (Service Control Policies)
-    Associated with a service called AWS Organizations.
-    SCPs is they don't actually grant permissions,hey control the permissions you're allowed to use.
+    SCPs (Service Control Policies)
+        Associated with a service called AWS Organizations.
+        SCPs is they don't actually grant permissions,hey control the permissions you're allowed to use.
+
+
+PRACTICE EC2
+================================================
+
+    - EC2 have an attached with EBS volume
+    - Security Group (Firewall): định nghĩa traffic roles (cho phép SSH, cho phép https traffic...allow anywhere ...)
