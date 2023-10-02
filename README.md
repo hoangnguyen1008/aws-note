@@ -70,8 +70,23 @@ https://digitalcloud.training/aws-identity-and-access-management/
         SCPs is they don't actually grant permissions,hey control the permissions you're allowed to use.
 
 
-PRACTICE EC2
+PRACTICE
 ================================================
+EC2
 
     - EC2 have an attached with EBS volume
     - Security Group (Firewall): định nghĩa traffic roles (cho phép SSH, cho phép https traffic...allow anywhere ...)
+    -Config role và attach vào EC2 để tránh lộ key khi dùng aws configure
+    - AWS batch: dịch vụ run job
+
+ECS (Elastic container service)
+
+    - Cluster is group of task (container)
+    - Task definition (giống docker-compose)
+    - Có 2 cách deploy
+        - Run ECS EC2 Cluster với container bên trong. (charge for ec2, tự tạo infra, ..)
+        - Serverless: ECS Fargate cluster  (charge for task, không cần quan tâm infra.)
+
+ECR (Elastic container registry)
+
+    - Store Docker Image
